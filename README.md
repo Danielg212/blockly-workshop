@@ -24,10 +24,12 @@
 * open http://localhost:9000/
 * drag the `Hello World` block to the canvas
 * fill in your name inside the block
-![](./step1.png)
+![](./step1.png  =250x))
+
 * click on the button **Run your code**
 * you sould see something like 
-![](./step2.png)
+![](./step2.png =250x))
+
 * take a screenshot and share in [#group-front-end-guild slack channel](https://app.slack.com/client/T0ADSDB25/CFE1TJFSB)
 * now we know and you know, that you are ready !
 
