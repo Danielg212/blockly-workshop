@@ -61,19 +61,22 @@ the api is an global object accessible on the page:
 ### creating custom blocks
 * open `blockly-worksop-your-code.ts` 
 * look on the `Hello World" implementation
-** block definition is done like:
+
+* block definition is done like:
 ```javascript
 Blocks['myBlock'] = {
     init: function() {..}
 }
 ```
-** the JS generator that stand behind the block is defined like this:
+
+* the JS generator that stand behind the block is defined like this:
 ```javascript
 JavaScript['myBlock'] = (block: any)=> {
     return "the-generate-JS-you-wish-to-have-as-string"
   }
 ```
-** add your block to the toolBox this is done by updating the XML in `demo.ts`
+
+* add your block to the toolBox this is done by updating the XML in `demo.ts`
 ```javascript
 toolbox: `<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
   <block type="helloWorld"/>
