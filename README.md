@@ -31,8 +31,8 @@
 * take a screenshot and share in [#group-front-end-guild slack channel](https://app.slack.com/client/T0ADSDB25/CFE1TJFSB)
 * now we know and you know, that you are ready !
 
-#3) Logo
-* JS basic api 
+# 3) Logo
+### JS basic api 
 the api is an global object accessible on the page:
  
 * `api.logo.fd(x)` move forward x (number) steps
@@ -40,21 +40,7 @@ the api is an global object accessible on the page:
 * `api.logo.rt(x)` turn right x (number) angles
 * `api.logo.lt(x)` turn left x (number) angles
 
-* sample
-The following code will draw a square
-![](./step3.png)
-```javascript
-api.logo.fd(50);
-api.logo.rt(90);
-api.logo.fd(50);
-api.logo.rt(90);
-api.logo.fd(50);
-api.logo.rt(90);
-api.logo.fd(50);
-api.logo.rt(90);
-```
-
-* JS advanced api
+### JS advanced api
 * `api.logo.setAngle(x)` set angle to an absolute value of x (number)
 * `api.logo.home()` send te turtle back home
 * `api.logo.pu()` pen up (will move without drawing) 
@@ -69,3 +55,32 @@ api.logo.rt(90);
 * `api.logo.pen` switch from `erase` mode to `pen` mode
 * `api.logo.setScreenColor(x)` set background color to x (string). CSS format ('#FFFFFF' for white but also 'red' and rgb(1,2,3) works)
 * `api.logo.setLineColor(x)` set the ling color to x (string). CSS format ('#FFFFFF' for white but also 'red' and rgb(1,2,3) works)
+
+
+# 4) Blockly
+### creating custom blocks
+* open `blockly-worksop-your-code.ts` 
+* look on the `Hello World" implementation
+** block definition is done like:
+```javascript
+Blocks['myBlock'] = {
+    init: function() {..}
+}
+```
+** the JS generator that stand behind the block is defined like this:
+```javascript
+JavaScript['myBlock'] = (block: any)=> {
+    return "the-generate-JS-you-wish-to-have-as-string"
+  }
+```
+** add your block to the toolBox this is done by updating the XML in `demo.ts`
+```javascript
+toolbox: `<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+  <block type="helloWorld"/>
+  <block type="myBlock"/>
+</xml>`
+``` 
+
+### references
+* [Blockly home page](https://developers.google.com/blockly/)
+* [Blockly dev tool](https://blockly-demo.appspot.com/static/demos/blockfactory/index.html)
