@@ -1,0 +1,24 @@
+{
+  "name": "fun-with-blockly-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack-dev-server --port 9000 --env.dev --inline --progress --profile --colors --watch --content-base dist/",
+    "build": "rm -rf dist ; mkdir dist ; cp -r src/css src/images dist/ ;  webpack --display-error-details --config webpack.config.js"
+  },
+  "author": "Yonatan Maman",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "7.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "ts-loader": "^6.2.0",
+    "typescript": "^3.6.3",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
+  },
+  "dependencies": {
+    "blockly": "^3.20191014.2"
+  }
+}
