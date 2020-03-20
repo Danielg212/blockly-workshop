@@ -12,8 +12,8 @@ const loadObBlocks = () => {
         .appendField("hello world")
 
       this.appendDummyInput()
-        .appendField('from: ')
-        .appendField(new Blockly.FieldTextInput(''), 'fromName')
+        .appendField('your name:')
+        .appendField(new Blockly.FieldTextInput(''), 'yourName')
 
       this.setNextStatement(true, 'LogoBlock')
       this.setPreviousStatement(true, 'LogoBlock')
@@ -22,9 +22,8 @@ const loadObBlocks = () => {
   }
 
   JavaScript['helloWorld'] = (block: any)=> {
-    let message = block.getFieldValue('fromName')
-    // return `alert('${message}')\nconsole.log('${message}')\n`
-    return `api.logo.fd(${message})\napi.logo.rt(90)\n`
+    let yourName = block.getFieldValue('yourName')
+    return `console.log('hello world ${yourName}');\nalert('hello world ${yourName}')\n`
   }
   ///// helloWorld end ///////////
 
