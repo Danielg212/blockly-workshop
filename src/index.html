@@ -1,46 +1,36 @@
 <html>
-<head>
-
-
-  <link rel="stylesheet" href="css/main.css" />
-
-
-  <style>
-  #textareaXml button {
-    bottom: 0;
-    right: 0;
-    position: absolute;
-  }
-</style>
-
-
-</head>
-
-<body>
-<div id="container">
-  <div id='blockly-container'>
-  </div>
-
-  <div id="code-container" style="">
-    <div id="flex-container" style="min-height: 100%;">
-      <button id="btn-run">Run your code</button>
-      <div id="js-container" >
-        <textarea id="js-textarea" ></textarea>
+  <head>
+    <style>
+    #textareaXml button {
+      bottom: 0;
+      right: 0;
+      position: absolute;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id='blockly-container'>
       </div>
-<!--      <div style="height: 50%;width: 100%;display: block;">-->
-<!--      </div>-->
-      <div id="tabs" class='ext-window'>
-        <div id="tabs-canvas">
-          <img id=turtle src="images/turtle.png" />
-          <canvas id="logo" class='canvas' width=750 height=380 style='border: 1px dashed'>
-          </canvas>
+
+      <div id="code-container">
+        <div id="flex-container" style="min-height: 100%;">
+          <button id="btn-run">Run your code</button>
+          <div id="js-container" >
+            <textarea id="js-textarea" ></textarea>
+          </div>
+    <!--      <div style="height: 50%;width: 100%;display: block;">-->
+    <!--      </div>-->
+          <div id="tabs" class='ext-window'>
+            <div id="tabs-canvas">
+              <img id="turtle" src="/images/turtle.png" />
+              <canvas id="logo" class='canvas' width=750 height=380 style='border: 1px dashed'>
+              </canvas>
+            </div>
+          </div>
         </div>
-      </div>
+    <!-- logo -->
+      <div id="status"> </div>
     </div>
-<!-- logo -->
-  <div id="status"> </div>
-</div>
-
-</body>
-
+  </body>
 </html>

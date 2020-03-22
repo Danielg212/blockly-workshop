@@ -4,14 +4,17 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "webpack-dev-server --port 9000 --env.dev --inline --progress --profile --colors --watch --content-base dist/",
+    "start": "npm run build && webpack-dev-server --port 9000 --env.dev --inline --progress --profile --colors --watch --content-base dist/",
     "build": "rm -rf dist ; mkdir dist ; cp -r src/css src/images dist/ ;  webpack --display-error-details --config webpack.config.js"
   },
   "author": "Yonatan Maman",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "7.0.0",
+    "css-loader": "^3.4.2",
+    "file-loader": "^6.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.1.3",
     "ts-loader": "^6.2.0",
     "typescript": "^3.6.3",
     "webpack": "^4.41.0",
