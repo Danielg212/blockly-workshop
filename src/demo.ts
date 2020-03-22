@@ -1,6 +1,8 @@
-import {blocklyWorksopYourCode, TurtleBlockly} from "./blockly-worksop-your-code.ts";
-import {turtleLogo} from "./logo/turtleLogo.ts";
+import {blocklyWorksopYourCode, TurtleBlockly} from './blockly-worksop-your-code.ts';
+import {turtleLogo} from './logo/turtleLogo.ts';
 
+// import './css/jquery-ui.css';
+import './css/main.css';
 
 turtleLogo.init();
 
