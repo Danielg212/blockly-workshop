@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
   let canvas = document.getElementById('logo');
   logo = new LogoCanvas.LogoCanvas(canvas, $('#turtle'));
   window.api = window.api || {logo: logo}
+
+  $('#btn-clear').on('click', function() {
+    window.api.logo.cs();
+  });
 }, false);
 
 

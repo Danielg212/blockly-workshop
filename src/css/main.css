@@ -112,3 +112,27 @@ img.banner {
 #btn-run:hover {
     background: #327bf0;
 }
+
+#btn-clear {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: 900;
+    background: #f07b32;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+#btn-clear:hover {
+    opacity: 1;
+}
