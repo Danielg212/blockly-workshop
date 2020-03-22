@@ -1,30 +1,114 @@
-.ext-window {width: 800px;}
-.black {background: black; color: white;}
-.yellow {color: yellow;}
-#turtle {position: absolute; top: 0; left: 0; width: 20px; height: 20px;}
-.canvas {position: relative; top: 0; left: 0;}
-textarea {resize: none;}
-pre {width: 99%;}
-img.banner {height:70px;}
-body {overflow-x: hidden;}
-#status {width: 99%;}
-#js-container {
-    height: 30%;
-    width: 100%;
-    display: block;
+* {
+    box-sizing: border-box;
 }
-#js-textarea{
-    width: 100%;
-    height: 100%;
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
 }
+
+.black {
+    background: black; 
+    color: white;
+}
+
+.yellow {
+    color: yellow;
+}
+
+#turtle {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 20px; 
+    height: 20px;
+    transform: translate(-50%, -50%);
+}
+
+img.banner {
+    height: 70px;
+}
+
+#main-wrapper {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
 #blockly-container {
-    width: 30%;
-    heigt: 30%;
-    display: inline-block;
+    flex: 2;
+    position: relative;
 }
-#code-container {
-    width: 39%;
-    display: inline-block;
+
+#preview-wrapper {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#js-container {
+    flex: 2;
+}
+
+#js-textarea {
+    display: block;
+    width: 100%;
     height: 100%;
-    vertical-align:top
+    border: none;
+    resize: none;
+    background: #eee;
+    font-size: 14px;
+    padding: 10px;
+    line-height: 1.5em;
+}
+
+#tabs {
+    flex: 4;
+    position: relative;
+}
+
+#logo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px dashed #ccc;
+}
+
+#status {
+    background: #a9f2d0;
+    flex: 0.5;
+    color: #157b4b;
+    display: none;
+}
+
+#btn-run {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 100;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 900;
+    background: #4285f4;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+
+#btn-run:hover {
+    background: #327bf0;
 }

@@ -21,9 +21,11 @@ class LogoCanvas {
 	constructor(canvas, turtle) {
 		this.turtle = turtle;
 		this.canvas = canvas;
+		this.canvas.width = canvas.getBoundingClientRect().width;
+		this.canvas.height = canvas.getBoundingClientRect().height;
 		let pos = cumulativeOffset(this.canvas);
 		// this.canvas_left = pos.left + $(turtle).width() / 1.5 - 22;
-		this.canvas_left = pos.left - $(turtle).width() / 2+1;
+		this.canvas_left = pos.left - $(turtle).width() / 2 + 1;
 		this.canvas_top = pos.top //- $(turtle).height() * 2 - 3;
 		this.ctx = canvas.getContext("2d");
 		this.lineWidth = 1;
@@ -137,8 +139,8 @@ class LogoCanvas {
 
 	// set turtle
 	setTurtle(x, y) {
-		this.turtle.css("left", this.canvas_left + x + this.cx);
-		this.turtle.css("top", this.canvas_top + y + this.cy);
+		this.turtle.css("left", x + this.cx - $(turtle).width() / 2 + 1);
+		this.turtle.css("top", y + this.cy - $(turtle).height() / 2 + 1);
 		this.setTurtleAngle(this.angle);
 	}
 

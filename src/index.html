@@ -1,36 +1,33 @@
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
     <style>
-    #textareaXml button {
-      bottom: 0;
-      right: 0;
-      position: absolute;
-    }
+      #textareaXml button {
+        bottom: 0;
+        right: 0;
+        position: absolute;
+      }
     </style>
   </head>
   <body>
-    <div id="container">
-      <div id='blockly-container'>
+    <div id="main-wrapper">
+      <div id="blockly-container">
+        <button id="btn-run">Run your code</button>
       </div>
 
-      <div id="code-container">
-        <div id="flex-container" style="min-height: 100%;">
-          <button id="btn-run">Run your code</button>
-          <div id="js-container" >
-            <textarea id="js-textarea" ></textarea>
-          </div>
-    <!--      <div style="height: 50%;width: 100%;display: block;">-->
-    <!--      </div>-->
-          <div id="tabs" class='ext-window'>
-            <div id="tabs-canvas">
-              <img id="turtle" src="/images/turtle.png" />
-              <canvas id="logo" class='canvas' width=750 height=380 style='border: 1px dashed'>
-              </canvas>
-            </div>
-          </div>
+      <div id="preview-wrapper">
+        <div id="tabs">
+          <img id="turtle" src="/images/turtle.png" />
+          <canvas id="logo" class="canvas"></canvas>
         </div>
-    <!-- logo -->
-      <div id="status"> </div>
+        <div id="js-container" >
+          <textarea id="js-textarea" readonly></textarea>
+        </div>
+
+        <!-- logo -->
+        <div id="status"></div>
+      </div>
     </div>
   </body>
 </html>
