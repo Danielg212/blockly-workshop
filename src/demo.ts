@@ -1,7 +1,7 @@
 import {blocklyWorksopYourCode, TurtleBlockly} from './blockly-worksop-your-code.ts';
 import {turtleLogo} from './logo/turtleLogo.ts';
 
-// import './css/jquery-ui.css';
+import './css/reset.css';
 import './css/main.css';
 
 turtleLogo.init();
@@ -52,7 +52,7 @@ function blocksToCode() {
 
 function showCode() {
   const code = blocksToCode()
-  document.getElementById('js-textarea').innerHTML = `//generated JS:\n${code}`
+  document.getElementById('js-textarea').innerHTML = `// Generated JS:\n${code}`
 }
 
 document.addEventListener('DOMContentLoaded', function() {
