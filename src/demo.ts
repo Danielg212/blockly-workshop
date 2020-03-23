@@ -38,6 +38,10 @@ export const init = () => {
     toolbox: `
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
     <block type="helloWorld"/>
+    <block type="rotate"/>
+    <block type="forward"/>
+    <block type="repeat"/>
+
 </xml>
         `,
   })
